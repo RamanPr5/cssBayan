@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-color: rgb(242, 163, 245);
+    height: 100vw;
+    width: 1200px;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mem {
+    max-width: 60%;
+    margin: 2% auto;
+}
+
+.mem-item {
+    border: 2px solid rgb(253, 255, 124);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.mem-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 50px;
+    transition: background .2s ease-out;
+}
+
+.mem-item-title:hover {
+    background-color: rgb(253, 255, 124);
+}
+
+.logo {
+    height: 1vw;
+    width: auto;
+}
+
+.mem-item-input {
+    appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;  
+}
+
+.mem-item-input:checked ~ .test .mem-item-title {
+    background-color: rgb(253, 255, 124);
+}
+
+input[type="radio"]:checked + .test .mem-item-content {
+    display: block;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover + .test .mem-item-content {
+    display: block;
+    cursor: pointer;
+}
+
+.mem-item-content {
+    display: none;
+}
+
+.mem-img {
+    width: 40%;
+    height: auto;
+    padding: 1% 30%;
+    transition: 1s;
+}
+
+.mem-img:hover {
+    transform: scale(1.05);
+}
+
+.mem-item:hover ~ .logo {
+    transform: rotate(180deg);
+}
+
+.mem-item-input:checked ~ .test .mem-item-title .logo {
+    transform: rotate(-180deg);
+}
